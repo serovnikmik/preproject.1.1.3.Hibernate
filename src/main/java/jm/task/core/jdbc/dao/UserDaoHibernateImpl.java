@@ -9,15 +9,15 @@ import java.util.List;
 
 public class UserDaoHibernateImpl implements UserDao {
 
-    private static String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS user(" +
+    private static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS user(" +
             "id BIGINT(1) AUTO_INCREMENT, " +
             "name VARCHAR(45) NOT NULL, " +
             "lastName VARCHAR(45) NOT NULL, " +
             "age TINYINT(1) NOT NULL, " +
             "PRIMARY KEY(id) " +
             ")";
-    private static String DROP_TABLE = "DROP TABLE IF EXISTS user";
-    private static String CLEAN_TABLE = "DELETE FROM user";
+    private static final String DROP_TABLE = "DROP TABLE IF EXISTS user";
+    private static final String CLEAN_TABLE = "DELETE FROM user";
 
     private Session currentSession;
     private Transaction currentTransaction;
